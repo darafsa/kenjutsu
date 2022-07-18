@@ -22,3 +22,9 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
+      
+      - name: Create 404 File
+        uses: canastro/copy-file-action@master
+        with:
+          source: "index.html"
+          target: "404.html"
