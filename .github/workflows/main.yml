@@ -17,14 +17,14 @@ jobs:
         run: |
           yarn
           yarn build
-        
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: dist
       
       - name: Create 404 File
         uses: canastro/copy-file-action@master
         with:
-          source: "index.html"
-          target: "404.html"
+          source: "dist/index.html"
+          target: "dist/404.html"
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
