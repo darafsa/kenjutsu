@@ -1,6 +1,8 @@
 <template>
 	<div>
-		<h1>Home</h1>
+		<h1>KENJUTSU</h1>
+		<h2>Jena</h2>
+		<div class="test"></div>
 	</div>
 </template>
 
@@ -8,6 +10,9 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
+.test {
+	height: 100rem;
+}
 </style>
