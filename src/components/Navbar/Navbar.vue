@@ -19,16 +19,23 @@ import { useRoute } from "vue-router";
 const route = useRoute();
 
 const routes = {
-	"Home": "Start",
-	"About": "Über"
-}
+	Home: "Start",
+	About: "Über",
+};
 </script>
 
 <style lang="scss" scoped>
+$background: #330e0e;
+$active: #570b01;
+$hover: #240400;
+
 #navbar-container {
 	//font-family: "Kaushan Script", cursive;
-	background-color: #333;
-	
+	background-color: $background;
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+
 	h2 {
 		margin: 0;
 		padding: 0.5rem;
@@ -39,9 +46,6 @@ const routes = {
 		list-style-type: none;
 		padding: 0;
 		overflow: hidden;
-		position: -webkit-sticky; /* Safari */
-		position: sticky;
-		top: 0;
 
 		li {
 			float: left;
@@ -50,17 +54,18 @@ const routes = {
 				display: block;
 				color: white;
 				text-align: center;
-				padding: 0.75rem 2rem;
+				padding: 0.75rem;
+				width: 6rem;
 				text-decoration: none;
 
 				&:hover {
-					background-color: #111;
+					background-color: $hover;
 				}
 			}
 		}
 
 		.active {
-			background-color: #570b01;
+			background-color: $active;
 		}
 	}
 }
