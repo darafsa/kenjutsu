@@ -10,6 +10,7 @@
 				>
 			</li>
 		</ul>
+		<div class="placeholder"></div>
 	</div>
 </template>
 
@@ -25,13 +26,9 @@ const routes = {
 </script>
 
 <style lang="scss" scoped>
-$background: #330e0e;
-$active: #570b01;
-$hover: #240400;
-
 #navbar-container {
 	//font-family: "Kaushan Script", cursive;
-	background-color: $background;
+	background-color: $color-base;
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
 	top: 0;
@@ -49,6 +46,7 @@ $hover: #240400;
 
 		li {
 			float: left;
+			border: none;
 
 			a {
 				display: block;
@@ -57,16 +55,22 @@ $hover: #240400;
 				padding: 0.75rem;
 				width: 6rem;
 				text-decoration: none;
+				outline: none;
 
-				&:hover {
-					background-color: $hover;
+				&:hover:not(.active){
+					background-color: $color-light;
+				}
+
+				&.active {
+					background-color: $color-dark;
 				}
 			}
 		}
+	}
 
-		.active {
-			background-color: $active;
-		}
+	.placeholder {
+		height: 0.5rem;
+		background-color: $color-dark;
 	}
 }
 </style>
