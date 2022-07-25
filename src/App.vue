@@ -9,6 +9,12 @@ import Navbar from "@/components/Navbar/Navbar.vue";
 	<router-view></router-view>
 </template>
 
-<style scoped>
+<style lang="scss">
+body {
+	font-family: $font-standard;
+}
 
+h1, h2 {
+	font-family: $font-fancy;
+}
 </style>

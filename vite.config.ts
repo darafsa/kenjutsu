@@ -16,7 +16,7 @@ export default defineConfig({
       scss: {
         additionalData: `
           @import "@/styles/global.scss";
-          @import "@/styles/colors.scss";
+          @import "@/styles/themes/standard.scss";
         `
       }
     }

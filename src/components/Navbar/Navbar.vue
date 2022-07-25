@@ -56,6 +56,7 @@ const routes = {
 				width: 6rem;
 				text-decoration: none;
 				outline: none;
+				font-family: $font-fancy;
 
 				&:hover:not(.active){
 					background-color: $color-light;
