@@ -6,6 +6,7 @@
 				<router-link
 					:class="{ active: route.name == key }"
 					:to="{ name: key }"
+					role="button"
 					>{{ name }}</router-link
 				>
 			</li>
@@ -32,6 +33,7 @@ const routes = {
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
 	top: 0;
+	z-index: 1;
 
 	h2 {
 		margin: 0;
@@ -58,7 +60,7 @@ const routes = {
 				outline: none;
 				font-family: $font-fancy;
 
-				&:hover:not(.active){
+				&:hover:not(.active), &:focus:not(.active) {
 					background-color: $color-light;
 				}
 

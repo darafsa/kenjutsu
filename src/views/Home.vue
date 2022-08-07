@@ -3,13 +3,30 @@
 		<h1>KENJUTSU</h1>
 		<div class="box">
 			<p>
-				<b>Kenjutsu</b> (japanisch 剣術 &bdquo;Schwerttechnik(en),
-				Schwertkunst&ldquo;) ist der Oberbegriff aller Formen der
-				japanischen <b>Schwertkunst</b>, insbesondere jener Disziplinen,
-				welche vor der Meiji-Zeit entstanden. Die heutigen Formen des
-				modernen Kendō und Iaidō, die im 20. Jahrhundert entstanden, haben
-				ebenfalls ihren Ursprung zu dieser Zeit. Praktizierende des Kenjutsu
-				heißen Kenshi (剣士).
+				<Tooltip
+					><b>Kenjutsu</b
+					><template #tooltip
+						><Vocabulary
+							kanji="剣術"
+							hiragana="けんじゅつ"
+							romaji="kenjutsu"
+							translation="Fechtkunst, Schwertkunst"
+						></Vocabulary></template
+				></Tooltip>
+				ist der Oberbegriff aller Formen der japanischen Schwertkunst,
+				insbesondere jener Disziplinen, welche vor der Meiji-Zeit
+				entstanden. Die heutigen Formen des modernen Kendō und Iaidō, die im
+				20. Jahrhundert entstanden, haben ebenfalls ihren Ursprung zu dieser
+				Zeit. Praktizierende des Kenjutsu heißen
+				<Tooltip
+					>Kenshi<template #tooltip
+						><Vocabulary
+							kanji="剣士"
+							hiragana="けんし"
+							romaji="kenshi"
+							translation="Schwertkämpfer, Schwertmeister, Fechter"
+						></Vocabulary></template></Tooltip
+				>.
 			</p>
 			<p>
 				<i>Kenjutsu</i> in all seinen ursprünglichen Ausprägungen wurde von
@@ -36,12 +53,21 @@
 				war die Überlegenheit auf dem Schlachtfeld und dienlich dazu war
 				auch jeder intuitive taktische Überraschungsmoment.
 			</p>
-			<p><i>Quelle: <a href="https://de.wikipedia.org/wiki/Kenjutsu" target="_blank">Wikipedia</a></i></p>
+			<p>
+				<i
+					>Quelle:
+					<a href="https://de.wikipedia.org/wiki/Kenjutsu" target="_blank"
+						>Wikipedia</a
+					></i
+				>
+			</p>
 		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
+import Tooltip from "@/components/general/Tooltip.vue";
+import Vocabulary from "../components/general/Vocabulary.vue";
 </script>
 
 <style lang="scss">
